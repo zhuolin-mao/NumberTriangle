@@ -86,6 +86,12 @@ public class NumberTriangle {
      * @param path the path to follow through this NumberTriangle
      * @return the root value at the location indicated by path
      *
+     /*
+     *
+     * Follow a path from this node and return the value at the destination.
+     * Empty path "" returns this node's value. Only 'l' and 'r' are allowed.
+     * Throws IllegalArgumentException for invalid characters and
+     * IllegalStateException if the path steps past a leaf.
      */
     public int retrieve(String path) {
         // Start from this node; an empty path returns this.root.
