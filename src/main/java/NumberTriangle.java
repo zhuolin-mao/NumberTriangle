@@ -128,6 +128,17 @@ public class NumberTriangle {
      * @return the topmost NumberTriangle object in the NumberTriangle structure read from the specified file
      * @throws IOException may naturally occur if an issue reading the file occurs
      */
+    /**
+     * Load a NumberTriangle from a whitespace-separated file packaged as a classpath resource.
+     * - First non-empty line must contain exactly one integer (top node).
+     * - Each subsequent non-empty line must have previousRowLength + 1 integers.
+     * - Lines may contain extra spaces; empty lines are ignored.
+     * @param fname resource name to read (e.g., "input_tree.txt")
+     * @return the top-most NumberTriangle node
+     * @throws FileNotFoundException if the resource cannot be found
+     * @throws IllegalArgumentException if the triangle format is invalid
+     * @throws IOException if an I/O error occurs while reading
+     */
     public static NumberTriangle loadTriangle(String fname) throws IOException {
         // open the file and get a BufferedReader object whose methods
         // are more convenient to work with when reading the file contents.
